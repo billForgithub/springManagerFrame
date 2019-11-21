@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.zuihou</groupId>
+    <artifactId>zuihou-admin-cloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <url>https://gitee.com/zuihou111/zuihou-admin-cloud</url>
+    <name>${project.artifactId}</name>
+    <description>zuihou-admin-cloud父pom, 对jar版本，仓库进行管理</description>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <modules>
+        <module>zuihou-dependencies</module>
+        <module>zuihou-commons</module>
+        <module>zuihou-backend</module>
+        <module>zuihou-support</module>
+    </modules>
+    <packaging>pom</packaging>
+    <developers>
+        <developer>
+            <name>zuihou</name>
+            <email>244387066@qq.com</email>
+        </developer>
+    </developers>
+
+</project>

@@ -1,0 +1,41 @@
+zuihou:
+  local-ip: ${LOCAL_IP:${spring.cloud.client.ip-address}}   # docker部署时，需要指定， 表示的运行该服务的宿主机IP
+  nacos:
+    ip: ${NACOS_IP:@pom.nacos.ip@}
+    port: ${NACOS_PORT:@pom.nacos.port@}
+    namespace: ${NACOS_ID:@pom.nacos.namespace@}
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: @project.artifactId@
+  profiles:
+    active: @pom.profile.name@
+  cloud:
+    nacos:
+      config:
+        server-addr: ${zuihou.nacos.ip}:${zuihou.nacos.port}
+        file-extension: yml
+        namespace: ${zuihou.nacos.namespace}
+        shared-dataids: common.yml,redis.yml,mysql.yml,rabbitmq.yml
+        refreshable-dataids: common.yml
+        enabled: true
+      discovery:
+        server-addr: ${zuihou.nacos.ip}:${zuihou.nacos.port}
+        namespace: ${zuihou.nacos.namespace}
+        metadata:
+          management.context-path: ${server.servlet.context-path:}${spring.mvc.servlet.path:}${management.endpoints.web.base-path:}
+          swagger: http://${zuihou.local-ip}:${server.port:}/swagger-resources
+          service.name: 消息服务
+
+logging:
+  path: /data/projects/logs
+
+info:
+  name: '@project.name@'
+  description: '@project.description@'
+  version: '@project.version@'
+  spring-boot-version: '@spring.boot.version@'
+  spring-cloud-version: '@spring.cloud.version@'

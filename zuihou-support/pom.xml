@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.github.zuihou</groupId>
+        <artifactId>zuihou-dependencies</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../zuihou-dependencies</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>zuihou-support</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>支撑模块</description>
+
+
+    <modules>
+        <!-- 废弃eureka， 采用nacos作为注册/配置中心 -->
+        <!--        <module>zuihou-eureka</module>-->
+
+        <!-- 监控和全链路调用监控 开发环境可以不用启动 -->
+        <module>zuihou-monitor</module>
+        <module>zuihou-zipkin</module>
+    </modules>
+
+</project>
