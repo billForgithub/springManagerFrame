@@ -16,7 +16,7 @@
     </springProfile>
 
     <springProfile name="dev">
-        <logger name="com.github.zuihou.authority.controller" additivity="true" level="${log.level.controller}">
+        <logger name="com.githubzi.zuihou.authority.controller" additivity="true" level="${log.level.controller}">
             <appender-ref ref="CONTROLLER_APPENDER"/>
         </logger>
         <logger name="com.github.zuihou.authority.service" additivity="true" level="${log.level.service}">

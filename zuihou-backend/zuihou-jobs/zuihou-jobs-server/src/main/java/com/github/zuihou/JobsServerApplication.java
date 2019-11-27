@@ -2,11 +2,15 @@ package com.github.zuihou;
 
 import java.net.InetAddress;
 
+import com.github.zuihou.auth.client.EnableAuthClient;
+import com.github.zuihou.auth.server.EnableAuthServer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
 /**
@@ -16,6 +20,7 @@ import org.springframework.core.env.Environment;
  * @createTime 2018-01-25 10:13
  */
 @SpringBootApplication
+@EnableAuthServer
 @ComponentScan({
         "com.github.zuihou",
         "com.xxl.job.admin",

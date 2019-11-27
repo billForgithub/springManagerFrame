@@ -1,9 +1,10 @@
 zuihou:
   ip:
-    mysql: ${MYSQL_IP:127.0.0.1}
+    mysql: ${MYSQL_IP:39.105.187.71}
     executor: ${EXECUTOR_IP:127.0.0.1}
   mysql:
     port: 3306
     username: root
-    password: root
+    password: password
+    database: zuihou_defaults
 

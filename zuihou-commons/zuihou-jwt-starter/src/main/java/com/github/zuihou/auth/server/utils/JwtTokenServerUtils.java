@@ -7,6 +7,7 @@ import com.github.zuihou.auth.utils.Token;
 import com.github.zuihou.exception.BizException;
 
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 /**
  * jwt token 工具
